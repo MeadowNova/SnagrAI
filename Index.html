@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snagr AI | AI-Powered Facebook Marketplace Deal Concierge</title>
+    <meta name="description" content="Snagr AI helps buyers find exact matches on Facebook Marketplace instantly—no more endless scrolling or wasted time.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.2) 0%, rgba(67, 56, 202, 0.1) 50%, rgba(15, 23, 42, 0) 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-white text-secondary-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="relative z-10 py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Snagr AI Logo" class="h-10">
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works" class="text-secondary-600 hover:text-primary-600 font-medium transition-colors">How It Works</a>
+                    <a href="#benefits" class="text-secondary-600 hover:text-primary-600 font-medium transition-colors">Benefits</a>
+                    <a href="#faq" class="text-secondary-600 hover:text-primary-600 font-medium transition-colors">FAQ</a>
+                    <a href="#waitlist" class="bg-primary-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">Join Waitlist</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-secondary-600 hover:text-primary-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 overflow-hidden">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                    <span class="inline-block py-1 px-3 rounded-full bg-primary-100 text-primary-800 font-medium text-sm mb-6">Coming Soon</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Stop Scrolling, Start <span class="text-primary-600">Finding</span> Marketplace Deals
+                    </h1>
+                    <p class="text-xl text-secondary-600 mb-8 max-w-lg">
+                        Snagr AI hunts for your perfect Facebook Marketplace items 24/7. Describe what you want once, get instant alerts when exact matches appear—before anyone else sees them.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#waitlist" class="gradient-bg text-white font-medium px-8 py-4 rounded-lg text-center hover:opacity-90 transition-opacity">
+                            Get Early Access
+                        </a>
+                        <a href="#how-it-works" class="bg-white border border-secondary-200 text-secondary-800 font-medium px-8 py-4 rounded-lg text-center hover:bg-secondary-50 transition-colors">
+                            See How It Works
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                        <div class="absolute -bottom-8 right-4 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                        <div class="relative">
+                            <img src="images/hero-image.png" alt="Snagr AI - AI-powered Facebook Marketplace deal concierge" class="rounded-2xl shadow-2xl w-full">
+                            <div class="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4 w-48">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
+                                    <span class="text-xs font-medium text-green-600">Match Found</span>
+                                </div>
+                                <p class="text-sm font-medium">Vintage desk lamp, $45</p>
+                                <p class="text-xs text-secondary-500">2.3 miles away</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-8 bg-secondary-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center">
+                    <span class="text-sm font-medium text-secondary-500 mr-4">Trusted Technology</span>
+                    <div class="h-6 w-px bg-secondary-200 mr-4"></div>
+                    <span class="bg-secondary-200 text-secondary-600 text-xs font-medium px-2 py-1 rounded">Beta v0.1</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="text-secondary-400 text-sm font-medium">Powered by Advanced AI</div>
+                    <div class="text-secondary-400 text-sm font-medium">Real-time Notifications</div>
+                    <div class="text-secondary-400 text-sm font-medium">Privacy Focused</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Your AI Deal-Finding Assistant</h2>
+                <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+                    Three simple steps to never miss your perfect marketplace find again.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-secondary-100">
+                    <div class="flex justify-center mb-6">
+                        <img src="images/step1-describe.png" alt="Describe What You Want - Search form illustration" class="h-24">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Describe What You Want</h3>
+                    <p class="text-secondary-600">
+                        Be as detailed as you want—item type, condition, price range, location—and let our AI know exactly what you're hunting for.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-secondary-100">
+                    <div class="flex justify-center mb-6">
+                        <img src="images/step2-search.png" alt="AI Starts Searching - AI brain scanning marketplace items" class="h-24">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI Starts Searching</h3>
+                    <p class="text-secondary-600">
+                        While you live your life, our AI works 24/7 scanning thousands of listings to find your perfect match, filtering out everything that doesn't meet your exact criteria.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-secondary-100">
+                    <div class="flex justify-center mb-6">
+                        <img src="images/step3-alerts.png" alt="Get Instant Alerts - Notification bell with marketplace items" class="h-24">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Get Instant Alerts</h3>
+                    <p class="text-secondary-600">
+                        Get instant alerts the moment your perfect item appears—giving you the first-mover advantage to contact sellers before anyone else even sees the listing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-secondary-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Marketplace Shoppers Love Snagr AI</h2>
+                <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+                    Your personal AI deal hunter works while you don't—finding exactly what you want, when you want it.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-secondary-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Save Hours of Time</h3>
+                    <p class="text-secondary-600">
+                        Reclaim your time. While others spend hours scrolling, you'll receive perfect matches automatically—giving you back precious hours every week.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-secondary-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Never Miss a Deal</h3>
+                    <p class="text-secondary-600">
+                        Beat the competition every time. Get notified the moment your dream items are listed—securing deals others won't even know existed.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border border-secondary-100">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Personalized Results</h3>
+                    <p class="text-secondary-600">
+                        The more you use Snagr AI, the smarter it gets—learning your style, preferences, and deal-breakers to deliver increasingly perfect matches just for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Be Among the First to Find Deals Others Miss</h2>
+                <p class="text-xl text-secondary-600 mb-8">
+                    Join our exclusive early access list today and start discovering perfect marketplace finds while everyone else is still scrolling.
+                </p>
+                
+                <div class="bg-white rounded-xl p-8 shadow-xl border border-secondary-100">
+                    <form class="flex flex-col md:flex-row gap-4">
+                        <input type="email" placeholder="Enter your email address" class="flex-1 px-4 py-3 rounded-lg border border-secondary-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500" required>
+                        <button type="submit" class="gradient-bg text-white font-medium px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+                            Get Early Access
+                        </button>
+                    </form>
+                    <p class="text-secondary-500 text-sm mt-4">
+                        Limited spots available. We respect your privacy and will never share your information with third parties.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-secondary-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Common Questions</h2>
+                <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+                    Get the answers you need about how Snagr AI works for you.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Question 1 -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4">How does Snagr AI protect my privacy?</h3>
+                    <p class="text-secondary-600">
+                        Your privacy is our priority. Snagr AI only scans public marketplace listings, encrypts your search preferences, and never shares your data. We store only what's essential to deliver perfect matches—nothing more.
+                    </p>
+                </div>
+                
+                <!-- Question 2 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">How quickly will I receive notifications about new listings?</h3>
+                    <p class="text-secondary-600">
+                        Lightning-fast alerts give you the edge. When your perfect item appears, you'll know instantly—often within seconds of listing. While others are still browsing, you'll already be messaging the seller.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary-600 rounded-2xl overflow-hidden">
+                <div class="px-6 py-12 md:p-12 md:flex items-center justify-between">
+                    <div class="mb-8 md:mb-0 md:max-w-lg">
+                        <h2 class="text-3xl font-bold text-white mb-4">Ready to stop endless scrolling?</h2>
+                        <p class="text-primary-100 text-lg">
+                            Join Snagr AI today and let our AI find your perfect marketplace items.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#waitlist" class="inline-block bg-white text-primary-600 font-medium px-8 py-4 rounded-lg hover:bg-primary-50 transition-colors">
+                            Get Early Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-secondary-900 text-secondary-400">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold text-white">Snagr AI</span>
+                    <p class="mt-2">AI-powered Facebook Marketplace deal concierge</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="mailto:hello@snagr.ai" class="hover:text-white transition-colors">Contact Us</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-secondary-800 text-center">
+                <p>&copy; 2025 Snagr AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for blob elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const blobs = document.querySelectorAll('.animate-blob');
+            blobs.forEach(blob => {
+                blob.style.animationDelay = Math.random() * 5 + 's';
+            });
+        });
+    </script>
+</body>
+</html>
